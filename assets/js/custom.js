@@ -1,3 +1,5 @@
+/** Galleries closure Function for backend side */
+
 const Galleries = (function ($) {
     let frame;
 
@@ -18,8 +20,6 @@ const Galleries = (function ($) {
             },
             multiple: false,
         });
-
-        /* frame.on('close', () => { }) */
 
         frame.on( 'select', () => {
             const state = frame.state();
@@ -47,9 +47,6 @@ const Galleries = (function ($) {
     };
 
     const addFieldRow = () =>{
-        //const row = $('#master-row').html();
-        //$(row).appendTo('#field_wrap');
-
         $('#field_wrap').append(addImageRow);
     };
 

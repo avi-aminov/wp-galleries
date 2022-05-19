@@ -24,10 +24,6 @@ class Helper {
             'post_status' => 'publish'
         ));
 
-        if(! $posts ) {
-            return false;
-        }
-
-        return $posts[0];
+        return $posts ? $posts[0] : false;
     }
 }

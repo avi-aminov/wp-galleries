@@ -34,11 +34,11 @@
 
 ![N|Solid](https://i.ibb.co/w4shkBc/2.png)
 
-## _Result for small-gallery_
+## _Result for medium-gallery_
 
 ![N|Solid](https://i.ibb.co/3TLhgPF/3.png)
 
-## _Result for medium-gallery_
+## _Result for small-gallery_
 
 ![N|Solid](https://i.ibb.co/SddxDqJ/4.png)
 
