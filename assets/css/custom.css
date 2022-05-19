@@ -1,0 +1,46 @@
+#wp-galleries-form {
+    width: 100%;
+}
+
+#wp-galleries-form img{
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+}
+
+#wp-galleries-form input[type=text] {
+    width:300px;
+}
+
+#wp-galleries-form .field_row {
+    border:1px solid #999;
+    margin-bottom:10px;
+    padding:10px;
+}
+
+#wp-galleries-form label {
+    padding:0 6px;
+}
+
+.field_left {
+    float:left;
+}
+
+.field_right {
+    float:left;
+    margin-left:10px;
+}
+
+#short-code-example{
+    margin-top: 40px;
+}
+
+#short-code-example h2{
+    padding: 10px 10px 10px 5px;
+}
+
+.clear {
+    clear:both;
+}
+
+
