@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WP Galleries
  * Plugin URI:
- * Description: Galleries Plugin
+ * Description: Simple Galleries Plugin
  * Version: 1.0.0
  * Author: Avi Aminov
  * Author URI: https://www.linkedin.com/in/avi-aminov-developer/
@@ -27,7 +27,7 @@ class WPGalleries {
         /** add new post type */
         add_action( 'init', 'gallery_post_type', 0 );
 
-        /** add shortcode */
+        /** add short code */
         add_shortcode('galleries', 'show_gallery_func');
 
         /** add image size with crop */
@@ -133,7 +133,3 @@ class WPGalleries {
 }
 
 $galleries = new WPGalleries();
-
-
-
-

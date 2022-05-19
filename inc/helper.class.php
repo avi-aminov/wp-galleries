@@ -15,4 +15,19 @@ class Helper {
         }
         return $randomString;
     }
+
+    public static function get_gallery_post_by_slug($slug){
+        $posts = get_posts(array(
+            'name' => $slug,
+            'posts_per_page' => 1,
+            'post_type' => 'galleries',
+            'post_status' => 'publish'
+        ));
+
+        if(! $posts ) {
+            return false;
+        }
+
+        return $posts[0];
+    }
 }

@@ -11,7 +11,8 @@ function show_gallery_func($atts) {
     $param = shortcode_atts($default, $atts);
 
     /** get gallery post by name (slug) */
-    $post = get_page_by_title( $param['name'], OBJECT, 'galleries' );
+    $post = Helper::get_gallery_post_by_slug($param['name']);
+    if(!$post) return;
 
     /** get images (gallery_data field) by post id */
     $images = get_post_field('gallery_data', $post->ID);
@@ -46,6 +47,9 @@ function show_gallery_func($atts) {
         }
     }
 
+    $next = __('Next', 'wp-galleries');
+    $previous = __('Previous', 'wp-galleries');
+
     /** preparat carousel html */
     $carousel = <<<HTML
     <div style="max-width: {$max_width}px;" id="wpGalleriesIndicators-{$uniq_id}" class="carousel slide" data-bs-ride="carousel">
@@ -57,11 +61,11 @@ function show_gallery_func($atts) {
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#wpGalleriesIndicators-{$uniq_id}" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="visually-hidden">{$previous}</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#wpGalleriesIndicators-{$uniq_id}" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="visually-hidden">{$next}</span>
         </button>
     </div>
 HTML;

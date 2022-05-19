@@ -13,15 +13,15 @@
 
                 <div class="field_left">
                     <div class="form_field">
-                        <label>Image URL</label>
+                        <label><?php echo __('Image URL', 'wp-galleries'); ?></label>
                         <input type="text" class="meta_image_url" name="gallery[image_url][]"
                                value="<?php esc_html_e( $gallery_data['image_url'][$i] ); ?>" />
                     </div>
                 </div>
 
                 <div class="field_right">
-                    <input class="button" type="button" value="Choose Image" onclick="Galleries.addImage(this)" /><br />
-                    <input class="button" type="button" value="Remove Image" onclick="Galleries.removeField(this)" />
+                    <input class="button" type="button" value="<?php echo __('Choose Image', 'wp-galleries'); ?>" onclick="Galleries.addImage(this)" /><br />
+                    <input class="button" type="button" value="<?php echo __('Remove Image', 'wp-galleries'); ?>" onclick="Galleries.removeField(this)" />
                 </div>
 
                 <div class="field_right image_wrap">
